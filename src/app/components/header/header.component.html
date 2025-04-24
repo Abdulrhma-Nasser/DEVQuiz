@@ -14,13 +14,19 @@
     </div>
     <div class="header-tool-bar">
       <div class="tool-bar-theme-toggle">
-        <button><i class="fa-solid fa-sun"></i></button>
+        <button (click)="themeService.toggleTheme()">
+          <i
+            [class]="
+              themeService.isDark() ? 'fa-solid fa-sun' : 'fa-solid fa-moon'
+            "
+          ></i>
+        </button>
         <span>|</span>
         <!-- <i class="fa-solid fa-moon"></i> -->
       </div>
       <div class="tool-bar-points">
         <i class="fa-solid fa-coins"></i>
-        100
+        {{ pointsService.points$() }}
         <span class="tool-bar-points-text"> points</span>
       </div>
     </div>
