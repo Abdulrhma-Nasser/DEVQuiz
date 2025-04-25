@@ -1,5 +1,6 @@
 export interface Quiz {
   id: number;
+  category: string;
   title: string;
   icon: string;
   difficulty: string;

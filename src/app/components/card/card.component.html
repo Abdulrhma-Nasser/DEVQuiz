@@ -1,0 +1,31 @@
+<!-- Star Quiz Card -->
+<div class="quiz-card">
+  <div class="quiz-card-header">
+    <div class="quiz-card-header-left">
+      <i [class]="quiz.icon"></i>
+      <div class="quiz-card-header-left-text">
+        <h3>{{ quiz.title }}</h3>
+        <span>6 Questions</span>
+      </div>
+    </div>
+    <i class="fa-solid fa-trash"></i>
+  </div>
+  <div class="quiz-card-score">
+    <span>Score</span>
+    <div class="progress-bar">
+      <div class="progress-bar-fill" [style.width]="quiz.score + '%'"></div>
+    </div>
+    <span>{{ quiz.score }}%</span>
+  </div>
+  <div class="quiz-card-footer">
+    <div class="footer-text">
+      <div class="footer-text-difficulty">
+        <span>quiz.difficulty</span>
+      </div>
+    </div>
+    <button class="quiz-card-button">
+      {{ buttonText }}
+    </button>
+  </div>
+</div>
+<!-- End Quiz Card -->

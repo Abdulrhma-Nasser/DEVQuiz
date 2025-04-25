@@ -5,6 +5,7 @@ export const quizzes: Quiz[] = [
   {
     id: 1,
     title: 'JavaScript Basics: Variables and Data Types',
+    category: 'JS',
     difficulty: 'Easy',
     score: 0,
     completed: false,
@@ -81,6 +82,7 @@ export const quizzes: Quiz[] = [
   {
     id: 2,
     title: 'JavaScript Basics: Operators',
+    category: 'JS',
     difficulty: 'Easy',
     score: 0,
     completed: false,
@@ -157,6 +159,7 @@ export const quizzes: Quiz[] = [
   {
     id: 3,
     title: 'JavaScript Basics: Control Flow',
+    category: 'JS',
     difficulty: 'Easy',
     score: 0,
     completed: false,
@@ -233,6 +236,7 @@ export const quizzes: Quiz[] = [
   {
     id: 4,
     title: 'JavaScript Basics: Functions',
+    category: 'JS',
     difficulty: 'Easy',
     score: 0,
     completed: false,
@@ -321,6 +325,7 @@ export const quizzes: Quiz[] = [
   {
     id: 5,
     title: 'JavaScript Arrays and Loops',
+    category: 'JS',
     difficulty: 'Intermediate',
     score: 0,
     completed: false,
@@ -405,6 +410,7 @@ export const quizzes: Quiz[] = [
   {
     id: 6,
     title: 'JavaScript Objects and Prototypes',
+    category: 'JS',
     difficulty: 'Intermediate',
     score: 0,
     completed: false,
@@ -489,6 +495,7 @@ export const quizzes: Quiz[] = [
   {
     id: 7,
     title: 'JavaScript Functions and Scope',
+    category: 'JS',
     difficulty: 'Intermediate',
     score: 0,
     completed: false,
@@ -595,6 +602,7 @@ export const quizzes: Quiz[] = [
   {
     id: 8,
     title: 'Advanced JavaScript: Closures and IIFEs',
+    category: 'JS',
     difficulty: 'Hard',
     score: 0,
     completed: false,
@@ -697,6 +705,7 @@ export const quizzes: Quiz[] = [
   {
     id: 9,
     title: 'Advanced JavaScript: Promises and Async/Await',
+    category: 'JS',
     difficulty: 'Hard',
     score: 0,
     completed: false,
@@ -785,6 +794,7 @@ export const quizzes: Quiz[] = [
   {
     id: 10,
     title: 'Advanced JavaScript: Event Loop and Concurrency',
+    category: 'JS',
     difficulty: 'Hard',
     score: 0,
     completed: false,
@@ -836,6 +846,7 @@ export const quizzes: Quiz[] = [
         id: 4,
         title: 'Which of these creates a microtask?',
         options: [
+          // Which of these creates a microtask?
           { id: 1, title: 'setTimeout()', isCorrect: false },
           { id: 2, title: 'Promise.resolve()', isCorrect: true },
           { id: 3, title: 'setInterval()', isCorrect: false },
@@ -879,6 +890,7 @@ export const quizzes: Quiz[] = [
   {
     id: 11,
     title: 'Advanced JavaScript: Modules and ES6+',
+    category: 'JS',
     difficulty: 'Hard',
     score: 0,
     completed: false,
@@ -968,6 +980,7 @@ export const quizzes: Quiz[] = [
   {
     id: 12,
     title: 'Advanced JavaScript: Performance and Optimization',
+    category: 'JS',
     difficulty: 'Hard',
     score: 0,
     completed: false,
