@@ -1,0 +1,17 @@
+<div class="section" [style.display]="quizzes.length > 0 ? 'block' : 'none'">
+  <div class="section-header">
+    <div class="header-left">
+      <i [class]="section.icon"></i>
+      <h3>{{ section.title }}</h3>
+    </div>
+    <span class="header-line"></span>
+    <div class="header-right">
+      <span>{{ quizzes.length }}</span>
+    </div>
+  </div>
+  <div class="section-body">
+    <ng-container *ngFor="let quiz of quizzes">
+      <app-card [quiz]="quiz"></app-card>
+    </ng-container>
+  </div>
+</div>

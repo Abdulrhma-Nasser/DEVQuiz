@@ -14,9 +14,24 @@ export class QuizService {
     );
   }
 
-  getCompletedQuizes(category: string): Quiz[] {
+  getCompletedQuizesByCategory(category: string): Quiz[] {
     return this.quizzes.filter(
       (quiz) => quiz.category === category && quiz.completed
     );
+  }
+
+  getCompletedQuizLength(): number {
+    return this.quizzes.filter(
+      (quiz) => quiz.completed
+    ).length;
+  }
+
+  toUnCompletedQuizes(id: number, category: string): void {
+    const quiz = this.quizzes.find(
+      (quiz) => quiz.id === id && quiz.category === category
+    );
+    if (quiz) {
+      quiz.completed = false;
+    }
   }
 }

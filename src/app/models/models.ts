@@ -22,4 +22,8 @@ export interface Option {
   isCorrect: boolean;
 }
 
-
+export interface Section {
+  id: number;
+  title: string;
+  icon: string;
+}

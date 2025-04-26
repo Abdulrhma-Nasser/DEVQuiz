@@ -1,3 +1,10 @@
-<p>
-  completedQuizes works!
-</p>
+@if (quizService.getCompletedQuizLength() === 0) {
+<app-test-knowledge></app-test-knowledge>
+} @else {
+<ng-container *ngFor="let section of sections">
+  <app-section
+    [section]="section"
+    [quizzes]="quizService.getCompletedQuizesByCategory(section.title)"
+  ></app-section>
+</ng-container>
+}

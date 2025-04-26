@@ -8,23 +8,39 @@
         <span>6 Questions</span>
       </div>
     </div>
-    <i class="fa-solid fa-trash"></i>
+    <button (click)="quizService.toUnCompletedQuizes(quiz.id, quiz.category)">
+      <i class="fa-solid fa-trash"></i>
+    </button>
   </div>
   <div class="quiz-card-score">
     <span>Score</span>
-    <div class="progress-bar">
-      <div class="progress-bar-fill" [style.width]="quiz.score + '%'"></div>
+    <div class="quiz-card-score-progress-bar">
+      <div
+        class="quiz-card-score-progress-bar-fill"
+        [style.width]="quiz.score + '%'"
+      ></div>
     </div>
-    <span>{{ quiz.score }}%</span>
+    <span class="quiz-card-score-percentage">{{ quiz.score }}%</span>
   </div>
   <div class="quiz-card-footer">
-    <div class="footer-text">
-      <div class="footer-text-difficulty">
-        <span>quiz.difficulty</span>
+    <div class="quiz-card-footer-text">
+      <div class="quiz-card-footer-text-difficulty">
+        <span class="material-symbols-outlined">speed</span>
+        <span class="quiz-card-footer-text-difficulty-text">{{
+          quiz.difficulty
+        }}</span>
+      </div>
+      <div
+        class="quiz-card-footer-text-completed-container"
+        [style.display]="quiz.completed ? 'flex' : 'none'"
+      >
+        <i class="fa-solid fa-flag"></i>
+        <span>{{ quiz.completed ? "Completed" : "" }}</span>
       </div>
     </div>
     <button class="quiz-card-button">
-      {{ buttonText }}
+      <i class="fa-solid fa-play"></i>
+      {{ quiz.completed ? "Replay" : "Start Quiz" }}
     </button>
   </div>
 </div>

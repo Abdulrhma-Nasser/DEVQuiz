@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Quiz } from '../../models/models';
+import { QuizService } from '../../services/quiz.service';
 
 @Component({
   selector: 'app-card',
@@ -9,9 +10,8 @@ import { Quiz } from '../../models/models';
 export class CardComponent implements OnInit {
 
   @Input({ required: true }) quiz: Quiz = {} as Quiz;
-  buttonText: string = '';
+  constructor(public quizService: QuizService) {}
 
   ngOnInit() {
-    this.buttonText = this.quiz.completed ? 'Replay' : 'Start Quiz';
   }
 }
