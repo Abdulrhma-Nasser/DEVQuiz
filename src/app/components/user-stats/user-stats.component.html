@@ -1,0 +1,25 @@
+<div class="quiz-summary">
+  <h3>Quizzes Summary</h3>
+  <div
+    class="circular-wrap"
+    [style.background]="
+      'conic-gradient(red ' +
+      (quizService.getCompletedQuizLength() / quizService.getQuizesLength()) *
+        100 +
+      '%, #f3f4f6 0%)'
+    "
+  >
+    <div class="circle">
+      <div class="circle-content">
+        <span class="circle-content-percentage">
+          {{ getCompletedQuizPercentage() }}%
+        </span>
+        <span class="circle-content-total">
+          {{ quizService.getCompletedQuizLength() }}/{{
+            quizService.getQuizesLength()
+          }}
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

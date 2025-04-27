@@ -14,6 +14,10 @@ export class QuizService {
     );
   }
 
+  getQuizesLength(): number {
+    return this.quizzes.length;
+  }
+
   getCompletedQuizesByCategory(category: string): Quiz[] {
     return this.quizzes.filter(
       (quiz) => quiz.category === category && quiz.completed

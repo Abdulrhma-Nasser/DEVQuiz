@@ -1,2 +1,41 @@
 <app-header></app-header>
-<app-completedQuizes></app-completedQuizes>
+<div class="container-fluid">
+  <div class="main-content">
+    <div class="navigation">
+      <nav>
+      <ul>
+        <li>
+          <button
+            routerLink="/completed-quizes"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+          >
+            Completed Quizes
+            <span routerLinkActive="active">
+              {{ quizService.getCompletedQuizLength() }}
+            </span>
+          </button>
+        </li>
+        <li>
+          <button
+            routerLink="/all-quizes"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+          >
+            All Quizes
+            <span routerLinkActive="active">
+              {{ quizService.getQuizesLength() }}
+            </span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="main-container">
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+    <app-user-stats class="user-stats"></app-user-stats>
+  </div>
+</div>
+</div>
