@@ -8,8 +8,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 300px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 300px;
   padding: 4px;
   border-radius: 5px;
   background-color: var(--nav-color);
@@ -37,10 +37,6 @@
   background-color: var(--header-color);
   border-radius: 5px;
   border: 1px solid var(--border-color);
-}
-
-.all-quizzes-nav li button.active.dark-theme {
-  border: none;
 }
 
 .all-quizzes-nav li button.active span {
@@ -100,9 +96,11 @@
 }
 
 .all-quizzes .section-header .difficulty {
+  margin-left: 0.5rem;
   font-size: 0.9rem;
   font-weight: 400;
   color: green;
+
 }
 
 

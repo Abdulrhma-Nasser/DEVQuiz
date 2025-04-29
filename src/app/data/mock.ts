@@ -324,7 +324,7 @@ export const quizzes: Quiz[] = [
   // Intermediate Quizzes (3 quizzes)
   {
     id: 5,
-    title: 'JavaScript Intermediate Quiz 5',
+    title: 'JavaScript Intermediate Quiz 1',
     category: 'JS',
     difficulty: 'Intermediate',
     score: 0,
@@ -409,7 +409,7 @@ export const quizzes: Quiz[] = [
   },
   {
     id: 6,
-    title: 'JavaScript Intermediate Quiz 6',
+    title: 'JavaScript Intermediate Quiz 2',
     category: 'JS',
     difficulty: 'Intermediate',
     score: 0,
@@ -494,7 +494,7 @@ export const quizzes: Quiz[] = [
   },
   {
     id: 7,
-    title: 'JavaScript Intermediate Quiz 7',
+    title: 'JavaScript Intermediate Quiz 3',
     category: 'JS',
     difficulty: 'Intermediate',
     score: 0,
@@ -601,7 +601,7 @@ export const quizzes: Quiz[] = [
   // Advanced Quizzes (5 quizzes)
   {
     id: 8,
-    title: 'JavaScript Advanced Quiz 8',
+    title: 'JavaScript Advanced Quiz 1',
     category: 'JS',
     difficulty: 'Advanced',
     score: 0,
@@ -704,7 +704,7 @@ export const quizzes: Quiz[] = [
   },
   {
     id: 9,
-    title: 'JavaScript Advanced Quiz 9',
+    title: 'JavaScript Advanced Quiz 2',
     category: 'JS',
     difficulty: 'Advanced',
     score: 0,
@@ -793,7 +793,7 @@ export const quizzes: Quiz[] = [
   },
   {
     id: 10,
-    title: 'JavaScript Advanced Quiz 10',
+    title: 'JavaScript Advanced Quiz 3',
     category: 'JS',
     difficulty: 'Advanced',
     score: 0,
@@ -888,7 +888,7 @@ export const quizzes: Quiz[] = [
   },
   {
     id: 11,
-    title: 'JavaScript Advanced Quiz 11',
+    title: 'JavaScript Advanced Quiz 4',
     category: 'JS',
     difficulty: 'Advanced',
     score: 0,
@@ -978,7 +978,7 @@ export const quizzes: Quiz[] = [
   },
   {
     id: 12,
-    title: 'JavaScript Advanced Quiz 12',
+    title: 'JavaScript Advanced Quiz 5',
     category: 'JS',
     difficulty: 'Advanced',
     score: 0,
@@ -1078,7 +1078,7 @@ export const quizzes: Quiz[] = [
     category: 'Python',
     difficulty: 'Beginner',
     score: 0,
-    completed: false,
+    completed: true,
     icon: 'fa-brands fa-python',
     questions: [
       {
@@ -1232,7 +1232,7 @@ export const quizzes: Quiz[] = [
     category: 'Python',
     difficulty: 'Beginner',
     score: 0,
-    completed: false,
+    completed: true,
     icon: 'fa-brands fa-python',
     questions: [
       {
@@ -1307,7 +1307,7 @@ export const quizzes: Quiz[] = [
   // Intermediate Python Quizzes (5 quizzes)
   {
     id: 4,
-    title: 'Python Intermediate Quiz 4',
+    title: 'Python Intermediate Quiz 1',
     category: 'Python',
     difficulty: 'Intermediate',
     score: 0,
@@ -1388,7 +1388,7 @@ export const quizzes: Quiz[] = [
   },
   {
     id: 5,
-    title: 'Python Intermediate Quiz 5',
+    title: 'Python Intermediate Quiz 2',
     category: 'Python',
     difficulty: 'Intermediate',
     score: 0,
@@ -1482,7 +1482,7 @@ export const quizzes: Quiz[] = [
   },
   {
     id: 6,
-    title: 'Python Intermediate Quiz 6',
+    title: 'Python Intermediate Quiz 3',
     category: 'Python',
     difficulty: 'Intermediate',
     score: 0,
@@ -1567,7 +1567,7 @@ export const quizzes: Quiz[] = [
   },
   {
     id: 7,
-    title: 'Python Intermediate Quiz 7',
+    title: 'Python Intermediate Quiz 4',
     category: 'Python',
     difficulty: 'Intermediate',
     score: 0,
@@ -1656,7 +1656,7 @@ export const quizzes: Quiz[] = [
   },
   {
     id: 8,
-    title: 'Python Intermediate Quiz 8',
+    title: 'Python Intermediate Quiz 5',
     category: 'Python',
     difficulty: 'Intermediate',
     score: 0,
@@ -1752,7 +1752,7 @@ export const quizzes: Quiz[] = [
   // Advanced Python Quizzes (2 quizzes)
   {
     id: 9,
-    title: 'Python Advanced Quiz 9',
+    title: 'Python Advanced Quiz 1',
     category: 'Python',
     difficulty: 'Advanced',
     score: 0,
@@ -1862,7 +1862,7 @@ export const quizzes: Quiz[] = [
   },
   {
     id: 10,
-    title: 'Python Advanced Quiz 10',
+    title: 'Python Advanced Quiz 2',
     category: 'Python',
     difficulty: 'Advanced',
     score: 0,

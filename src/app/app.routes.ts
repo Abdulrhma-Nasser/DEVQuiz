@@ -3,6 +3,6 @@ import { CompletedQuizesComponent } from './components/completedQuizes/completed
 import { AllQuizesComponent } from './components/all-quizes/all-quizes.component';
 export const routes: Routes = [
   { path: 'completed-quizes', component: CompletedQuizesComponent },
-  { path: 'all-quizes', component: AllQuizesComponent },
+  { path: 'all-quizzes', component: AllQuizesComponent },
   { path: '**', redirectTo: '/completed-quizes', pathMatch: 'full' },
 ];

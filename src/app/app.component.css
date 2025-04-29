@@ -64,7 +64,7 @@
   max-width: 100%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .main-content .main-container .user-stats {
     display: none;
   }
