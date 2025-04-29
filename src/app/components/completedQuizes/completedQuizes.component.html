@@ -2,9 +2,29 @@
 <app-test-knowledge></app-test-knowledge>
 } @else {
 <ng-container *ngFor="let section of sections">
-  <app-section
-    [section]="section"
-    [quizzes]="quizService.getCompletedQuizesByCategory(section.title)"
-  ></app-section>
+  <div
+    [style.display]="
+      quizService.getCompletedQuizesByCategory(section.title).length > 0
+        ? 'block'
+        : 'none'
+    "
+  >
+    <div class="section-header">
+      <div class="header-left">
+        <i [class]="section.icon"></i>
+        <h3>{{ section.title }}</h3>
+      </div>
+      <span class="header-line"></span>
+      <div class="header-right">
+        <span>{{
+          quizService.getCompletedQuizesByCategory(section.title).length
+        }}</span>
+      </div>
+    </div>
+    <app-section
+      [section]="section"
+      [quizzes]="quizService.getCompletedQuizesByCategory(section.title)"
+    ></app-section>
+  </div>
 </ng-container>
 }

@@ -8,7 +8,10 @@
         <span>6 Questions</span>
       </div>
     </div>
-    <button (click)="quizService.toUnCompletedQuizes(quiz.id, quiz.category)">
+    <button
+      (click)="quizService.toUnCompletedQuizes(quiz.id, quiz.category)"
+      [style.display]="quiz.completed ? 'block' : 'none'"
+    >
       <i class="fa-solid fa-trash"></i>
     </button>
   </div>

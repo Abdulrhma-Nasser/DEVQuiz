@@ -4,12 +4,11 @@ import { Section } from '../../models/models';
 import { CommonModule } from '@angular/common';
 import { QuizService } from '../../services/quiz.service';
 import { TestKnowledgeComponent } from '../test-knowledge/test-knowledge.component';
-import { UserStatsComponent } from '../user-stats/user-stats.component';
 @Component({
   selector: 'app-completedQuizes',
   templateUrl: './completedQuizes.component.html',
   styleUrls: ['./completedQuizes.component.css'],
-  imports: [SectionComponent, CommonModule, TestKnowledgeComponent, UserStatsComponent],
+  imports: [SectionComponent, CommonModule, TestKnowledgeComponent],
 })
 export class CompletedQuizesComponent {
   sections: Section[] = [

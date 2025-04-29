@@ -1,3 +1,47 @@
-<p>
-  all-quizes works!
-</p>
+<div class="all-quizzes">
+  <nav>
+    <ul class="all-quizzes-nav">
+      <li>
+        <button
+          (click)="toggleActive('JS')"
+          [ngClass]="{ active: activeQuiz === 'JS' }"
+        >
+          <i class="fab fa-js js"></i>
+          <span>JS</span>
+        </button>
+      </li>
+      <li>
+        <button
+          (click)="toggleActive('Python')"
+          [ngClass]="{ active: activeQuiz === 'Python' }"
+        >
+          <i class="fab fa-python py"></i>
+          <span>Python</span>
+        </button>
+      </li>
+      <li>
+        <button
+          (click)="toggleActive('Angular')"
+          [ngClass]="{ active: activeQuiz === 'Angular' }"
+        >
+          <i class="fab fa-angular ng"></i>
+          <span>Angular</span>
+        </button>
+      </li>
+    </ul>
+  </nav>
+  <h2>Explore {{ activeQuiz }} Quizzes</h2>
+  <p>{{ getDescription(activeQuiz) }}</p>
+  <div class="section" *ngFor="let difficulty of difficulties">
+    <div class="section-header">
+      <span class="material-symbols-outlined">speed</span>
+      <h3>
+        Difficulty : <span class="difficulty"> {{ difficulty }}</span>
+      </h3>
+    </div>
+    <app-section
+      [section]="getSection(activeQuiz)"
+      [quizzes]="quizService.getQuizes(difficulty, activeQuiz)"
+    ></app-section>
+  </div>
+</div>

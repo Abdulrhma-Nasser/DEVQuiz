@@ -1,0 +1,112 @@
+.all-quizzes {
+  padding: 2rem;
+  border-radius: 15px;
+  background-color: var(--header-color);
+}
+
+.all-quizzes-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 300px;
+  max-width: 100%;
+  padding: 4px;
+  border-radius: 5px;
+  background-color: var(--nav-color);
+}
+
+.all-quizzes-nav li {
+  list-style: none;
+}
+
+.all-quizzes-nav li button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px;
+  font-size: 0.9rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+}
+
+.all-quizzes-nav li button.active {
+  padding: 4px 12px;
+  background-color: var(--header-color);
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
+}
+
+.all-quizzes-nav li button.active.dark-theme {
+  border: none;
+}
+
+.all-quizzes-nav li button.active span {
+  color: var(--text-color);
+}
+
+.all-quizzes-nav li button i {
+  font-size: 1.3rem;
+}
+
+.all-quizzes-nav li button .js {
+  color: #9b9b38;
+}
+
+.all-quizzes-nav li button .py {
+  color: #306998;
+}
+
+.all-quizzes-nav li button .ng {
+  color: #dd0031;
+}
+
+
+.all-quizzes-nav li button span {
+  color: #737373;
+}
+
+.all-quizzes  h2 {
+  font-size: 1.3rem;
+  color: var(--text-color);
+  margin: 2rem 0 0.5rem 0;
+}
+
+.all-quizzes p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #737373;
+}
+
+.all-quizzes .section-header  {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.all-quizzes .section-header h3 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.all-quizzes .section-header span {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--text-color);
+
+}
+
+.all-quizzes .section-header .difficulty {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: green;
+}
+
+
+
+
+
+

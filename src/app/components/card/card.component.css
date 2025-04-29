@@ -1,10 +1,10 @@
 .quiz-card {
   max-width: 350px;
+  width: 100%;
   padding: 12px;
   border: 1px solid var(--border-color);
   border-radius: 8px;
   background-color: var(--header-color);
-  transition: all 0.3s ease;
 }
 
 .quiz-card-header {

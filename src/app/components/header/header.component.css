@@ -9,6 +9,8 @@
   background-color: var(--header-color);
 }
 
+
+
 .header-logo {
   display: flex;
   align-items: center;

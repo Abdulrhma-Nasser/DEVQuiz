@@ -25,5 +25,6 @@ export interface Option {
 export interface Section {
   id: number;
   title: string;
+  description?: string;
   icon: string;
 }

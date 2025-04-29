@@ -7,13 +7,14 @@ import { QuizService } from '../../services/quiz.service';
   styleUrls: ['./user-stats.component.css'],
 })
 export class UserStatsComponent {
+  Math: any;
   constructor(public quizService: QuizService) {}
 
   getCompletedQuizPercentage(): number {
-    return (
+    return Math.round(
       (this.quizService.getCompletedQuizLength() /
         this.quizService.getQuizesLength()) *
-      100
+        100
     );
   }
 }

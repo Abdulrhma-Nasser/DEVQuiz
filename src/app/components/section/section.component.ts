@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
 })
 export class SectionComponent {
   @Input({required:true}) section: Section = {} as Section;
-  @Input() quizzes: Quiz[] = [];
+  @Input({required:true}) quizzes: Quiz[] = [];
 
   constructor(public quizService: QuizService) {}
 }
