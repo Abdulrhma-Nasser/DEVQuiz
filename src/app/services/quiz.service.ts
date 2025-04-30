@@ -14,6 +14,10 @@ export class QuizService {
     );
   }
 
+  getQuizById(id: number): Quiz {
+    return this.quizzes.find((quiz) => quiz.id === id)!;
+  }
+
   getQuizesLength(): number {
     return this.quizzes.length;
   }

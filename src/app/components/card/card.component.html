@@ -41,7 +41,10 @@
         <span>{{ quiz.completed ? "Completed" : "" }}</span>
       </div>
     </div>
-    <button class="quiz-card-button">
+    <button
+      class="quiz-card-button"
+      routerLink="/main-quiz/{{ quiz.id }}"
+    >
       <i class="fa-solid fa-play"></i>
       {{ quiz.completed ? "Replay" : "Start Quiz" }}
     </button>
