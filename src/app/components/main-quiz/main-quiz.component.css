@@ -1,0 +1,215 @@
+.main-Quiz {
+  padding: 2.5rem;
+  position: relative;
+}
+
+.main-Quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.main-Quiz-header .header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.main-Quiz-header .header-left i {
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  padding: 9px 10px;
+  border-radius: 5px;
+  background-color: var(--card-hover-color);
+}
+
+.main-Quiz-header .header-left-title {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.main-Quiz-header .header-left-title h1 {
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.main-Quiz-header .header-left-title span {
+  font-size: 0.9rem;
+  color: #475679;
+}
+
+.main-Quiz-header .circle-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.main-Quiz-header .circle-wrapper .circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 83%;
+  height: 83%;
+  border-radius: 50%;
+  background: var(--header-color);
+}
+
+.main-Quiz-header .circle-wrapper .circle span {
+  font-size: 0.7rem;
+  color: var(--primary-color);
+}
+
+.main-Quiz-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.main-Quiz-body .question {
+  align-self: flex-start;
+}
+
+.main-Quiz-body .question .submit {
+  padding: 1rem 1.5rem;
+  background-color: var(--primary-color);
+  margin-top: 1rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.main-Quiz-body .question .submit:hover {
+  background-color: #df3b3b;
+}
+
+
+.main-Quiz-body .question h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 4rem;
+}
+
+.main-Quiz .question ul li {
+  list-style: none;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.main-Quiz .question ul li .option {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 0.8rem;
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  background: none;
+}
+
+.main-Quiz .question ul li .option.selected {
+  background-color: #dc26260d;
+  border-color: var(--primary-color);
+}
+
+.main-Quiz .question ul li .option:hover {
+  background-color: #dc26260d;
+  border-color: var(--primary-color);
+}
+
+.main-Quiz .question ul li .option:hover span {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+
+.main-Quiz .question ul li .option span {
+  padding: 8px 13px;
+  border-radius: 5px;
+  background-color: #E2E8F0;
+}
+
+.main-Quiz .question-list {
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+}
+
+.main-Quiz .question-list h3 {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-color);
+  padding: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.main-Quiz .question-list h3 span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.main-Quiz .question-list ul {
+  padding: 0 1.5rem 0.8rem 1.5rem;
+}
+
+.main-Quiz .question-list ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 15px;
+  font-size: 0.9rem;
+  color: #9d9d9d;
+}
+
+
+.main-Quiz .question-list ul .submitted {
+  color: var(--primary-color);
+  background-color: #fef2f2;
+  border: 1px solid var(--primary-color);
+}
+
+.main-Quiz .modal {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.8rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.main-Quiz .modal p {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 1rem;
+}
+
+.main-Quiz .modal p i {
+  color: red;
+  font-size: 1.2rem;
+}

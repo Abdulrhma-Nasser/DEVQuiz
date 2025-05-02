@@ -1,13 +1,13 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Quiz } from '../../models/models';
 import { QuizService } from '../../services/quiz.service';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.css'],
-  imports: [RouterLink, RouterOutlet],
+  imports: [RouterLink],
 })
 export class CardComponent implements OnInit {
 

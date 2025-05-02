@@ -29,9 +29,13 @@ export class QuizService {
   }
 
   getCompletedQuizLength(): number {
-    return this.quizzes.filter(
-      (quiz) => quiz.completed
-    ).length;
+    return this.quizzes.filter((quiz) => quiz.completed).length;
+  }
+
+  getCompletedQuizPercentage(): number {
+    return Math.round(
+      (this.getCompletedQuizLength() / this.getQuizesLength()) * 100
+    );
   }
 
   toUnCompletedQuizes(id: number, category: string): void {
@@ -41,5 +45,11 @@ export class QuizService {
     if (quiz) {
       quiz.completed = false;
     }
+  }
+
+  getCompeletedQuestionPer(questionNumber: number, id: number): number {
+    return Math.round(
+      (questionNumber / this.getQuizById(id).questions.length) * 100
+    );
   }
 }

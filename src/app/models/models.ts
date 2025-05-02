@@ -14,6 +14,7 @@ export interface Question {
   title: string;
   options: Option[];
   answer: string;
+  isCompeleted: boolean;
 }
 
 export interface Option {
