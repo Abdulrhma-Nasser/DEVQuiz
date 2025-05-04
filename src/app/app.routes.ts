@@ -13,6 +13,6 @@ export const routes: Routes = [
       { path: '**', redirectTo: 'completed-quizes', pathMatch: 'full' },
     ],
   },
-  { path: 'main-quiz/:id', component: MainQuizComponent },
+  { path: 'main-quiz/:id/:category', component: MainQuizComponent },
   { path: '**', redirectTo: 'main/completed-quizes', pathMatch: 'full' },
 ];

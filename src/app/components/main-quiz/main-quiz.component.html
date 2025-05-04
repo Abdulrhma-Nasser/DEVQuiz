@@ -36,7 +36,7 @@
           <button
             class="option"
             (click)="toggling(option.id)"
-            [ngClass]="{ selected: optionId === option.id }"
+            [ngClass]="{ selected: optionId! + 1 === option.id }"
           >
             <span>{{ getAlphabeticalIndex(i).toUpperCase() }}</span
             >{{ option.title }}
@@ -59,8 +59,20 @@
         </li>
       </ul>
     </div>
-    <div class="modal" [style.display]="popUp ? 'block' : 'none'">
+    <div class="modal" [style.opacity]="popUp ? 1 : 0">
       <p><i class="fa-solid fa-circle-xmark"></i>Please Select an Answer!</p>
     </div>
+  </div>
+
+  <div class="result">
+    <app-final-result
+      [quizPoints]="points"
+      [wrongAnswers]="wrong"
+      [correctAnswers]="correct"
+      [quizScore]="score"
+      [quizTitle]="quiz.title"
+      [grade]="grade"
+      [resultIcon]="icon"
+    ></app-final-result>
   </div>
 </div>

@@ -14,6 +14,12 @@ export class QuizService {
     );
   }
 
+  getQuiz(id: number, category: string): Quiz {
+    return this.quizzes.find(
+      (quiz) => quiz.id === id && quiz.category === category
+    )!;
+  }
+
   getQuizById(id: number): Quiz {
     return this.quizzes.find((quiz) => quiz.id === id)!;
   }

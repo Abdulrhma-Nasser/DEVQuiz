@@ -1,0 +1,35 @@
+<div class="final-result">
+  <div class="header">
+    <i [class]="resultIcon"></i>
+    <span class="grade">{{grade}}</span>
+    <span class="title">{{ quizTitle }}</span>
+  </div>
+  <div class="body">
+    <div class="result">
+      <span>Quiz Result</span>
+      <span
+        >{{ quizPoints }}
+
+        <i class="fa-solid fa-coins"></i>
+      </span>
+    </div>
+    <div class="score">
+      <span>Your Score</span>
+      <span>{{ quizScore }}%</span>
+    </div>
+    <div class="correct-wrong">
+      <div class="correct">
+        <span>{{ correctAnswers }}</span>
+        Correct
+      </div>
+      <div class="wrong">
+        <span>{{ wrongAnswers }}</span>
+        Wrong
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <button>Restart The Quiz</button>
+    <button>Continue</button>
+  </div>
+</div>

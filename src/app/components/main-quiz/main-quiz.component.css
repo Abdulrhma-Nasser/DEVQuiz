@@ -200,6 +200,8 @@
   padding: 0.8rem;
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .main-Quiz .modal p {
@@ -212,4 +214,17 @@
 .main-Quiz .modal p i {
   color: red;
   font-size: 1.2rem;
+}
+
+
+.main-Quiz .result {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
 }

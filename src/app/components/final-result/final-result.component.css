@@ -1,0 +1,22 @@
+.final-result {
+  width: 600px;
+  max-width: 100%;
+  background-color: #fff;
+  padding: 1.5rem;
+  opacity: 1;
+  border-radius: 8px;
+}
+
+.final-result .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.final-result .header i {
+  font-size: 5rem;
+  color: #ef4444;
+}
+
+.final-result .header .grade
