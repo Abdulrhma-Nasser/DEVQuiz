@@ -25,6 +25,7 @@ export class MainQuizComponent implements OnInit, OnDestroy {
   score: number = 0;
   grade: string = '';
   icon: string = '';
+  modalComponent: boolean = false;
   private timeOutID: any;
   constructor(public quizService: QuizService, private route: ActivatedRoute) {}
 
@@ -96,9 +97,10 @@ export class MainQuizComponent implements OnInit, OnDestroy {
 
     if (this.questionNumber !== this.quiz.questions.length - 1) {
       this.selected = false;
-    } else {
+      this.optionId = undefined;
+    } else if (this.quiz.questions[this.quiz.questions.length - 1].isCompeleted) {
       this.setgrade(this.score);
+      this.modalComponent = true;
     }
-    this.optionId = undefined;
   }
 }

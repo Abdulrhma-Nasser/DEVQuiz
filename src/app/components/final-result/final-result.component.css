@@ -19,4 +19,50 @@
   color: #ef4444;
 }
 
-.final-result .header .grade
+.final-result .header .grade {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.final-result .header .title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #6B7280;
+}
+
+.final-result .body {
+  padding: 1rem;
+  margin-top: 1.8rem;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+}
+
+.final-result .body .result {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.final-result .body .result i {
+  color: #eab308;
+}
+
+.final-result .body .score {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.final-result .body .score .yourScore {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #6B7280;
+}
+
+.final-result .body .score .scoreValue {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+

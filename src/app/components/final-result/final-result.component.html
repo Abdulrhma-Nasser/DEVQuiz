@@ -1,21 +1,20 @@
 <div class="final-result">
   <div class="header">
     <i [class]="resultIcon"></i>
-    <span class="grade">{{grade}}</span>
+    <span class="grade">{{ grade }}</span>
     <span class="title">{{ quizTitle }}</span>
   </div>
   <div class="body">
     <div class="result">
-      <span>Quiz Result</span>
-      <span
-        >{{ quizPoints }}
-
+      <span>Quiz Results</span>
+      <span>
         <i class="fa-solid fa-coins"></i>
+        +{{ quizPoints }}
       </span>
     </div>
     <div class="score">
-      <span>Your Score</span>
-      <span>{{ quizScore }}%</span>
+      <span class="yourScore">Your Score</span>
+      <span class="scoreValue">{{ quizScore }}%</span>
     </div>
     <div class="correct-wrong">
       <div class="correct">
