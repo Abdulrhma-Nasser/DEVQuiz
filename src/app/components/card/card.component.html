@@ -41,7 +41,7 @@
         <span>{{ quiz.completed ? "Completed" : "" }}</span>
       </div>
     </div>
-    <button class="quiz-card-button" routerLink="/main-quiz/{{quiz.id}}/{{quiz.category}}">
+    <button class="quiz-card-button" routerLink="/main-quiz/{{quiz.id}}/{{quiz.category}}" (click)="quizService.toUnCompletedQuizes(quiz.id, quiz.category)">
       <i class="fa-solid fa-play"></i>
       {{ quiz.completed ? "Replay" : "Start Quiz" }}
     </button>

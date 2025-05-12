@@ -1,6 +1,6 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
 import { QuizService } from '../../services/quiz.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Question, Quiz } from '../../models/models';
 import { CommonModule } from '@angular/common';
 import { FinalResultComponent } from '../final-result/final-result.component';
@@ -11,7 +11,7 @@ import { FinalResultComponent } from '../final-result/final-result.component';
   styleUrls: ['./main-quiz.component.css'],
   imports: [CommonModule, FinalResultComponent],
 })
-export class MainQuizComponent implements OnInit, OnDestroy {
+export class MainQuizComponent implements OnInit, OnDestroy, AfterViewInit {
   quizId: number | null = null;
   quizCategory: string | null = null;
   quiz: Quiz = {} as Quiz; //Type assertion to avoid type error
@@ -27,13 +27,19 @@ export class MainQuizComponent implements OnInit, OnDestroy {
   icon: string = '';
   modalComponent: boolean = false;
   private timeOutID: any;
-  constructor(public quizService: QuizService, private route: ActivatedRoute) {}
+  constructor(
+    public quizService: QuizService,
+    private route: ActivatedRoute,
+    private router: Router,
+  ) {}
 
   ngOnInit(): void {
     this.quizId = Number(this.route.snapshot.paramMap.get('id'));
     this.quizCategory = String(this.route.snapshot.paramMap.get('category'));
     this.quiz = this.quizService.getQuiz(this.quizId, this.quizCategory);
   }
+
+  ngAfterViewInit(): void {}
 
   ngOnDestroy(): void {
     if (this.timeOutID) {
@@ -66,13 +72,26 @@ export class MainQuizComponent implements OnInit, OnDestroy {
         this.icon = 'fa-solid fa-thumbs-down';
         break;
       case score >= 50 && score < 80:
-        this.grade = 'Good';
+        this.grade = 'Good!';
         this.icon = 'fa-solid fa-medal';
         break;
       default:
-        this.grade = 'Very Good';
+        this.grade = 'Very Good!';
         this.icon = 'fa-solid fa-medal';
     }
+  }
+
+  onRestartQuiz(): void {
+    this.wrong = 0;
+    this.correct = 0;
+    this.points = 0;
+    this.score = 0;
+    this.modalComponent = false;
+    this.quizService.toUnCompletedQuizes(this.quizId!, this.quizCategory!);
+    const currentUrl = this.router.url;
+    this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
+      this.router.navigate([currentUrl]);
+    });
   }
 
   onSubmit(question: Question) {
@@ -95,12 +114,15 @@ export class MainQuizComponent implements OnInit, OnDestroy {
       setTimeout(() => (this.popUp = false), 1500);
     }
 
-    if (this.questionNumber !== this.quiz.questions.length - 1) {
-      this.selected = false;
-      this.optionId = undefined;
-    } else if (this.quiz.questions[this.quiz.questions.length - 1].isCompeleted) {
+    if (this.quiz.questions[this.quiz.questions.length - 1].isCompeleted) {
       this.setgrade(this.score);
       this.modalComponent = true;
+      this.quiz.completed = true;
+      this.quiz.score = this.score;
+
+    } else {
+      this.optionId = undefined;
+      this.selected = false;
     }
   }
 }

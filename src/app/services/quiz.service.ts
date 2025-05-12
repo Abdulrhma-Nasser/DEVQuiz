@@ -50,6 +50,10 @@ export class QuizService {
     );
     if (quiz) {
       quiz.completed = false;
+      quiz.score = 0;
+      quiz.questions.forEach((quiz) => {
+        quiz.isCompeleted = false;
+      });
     }
   }
 

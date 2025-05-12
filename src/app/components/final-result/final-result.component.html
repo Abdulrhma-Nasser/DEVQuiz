@@ -17,18 +17,24 @@
       <span class="scoreValue">{{ quizScore }}%</span>
     </div>
     <div class="correct-wrong">
-      <div class="correct">
-        <span>{{ correctAnswers }}</span>
+      <div class="box bordered">
+        <span class="correct circle">{{ correctAnswers }}</span>
         Correct
       </div>
-      <div class="wrong">
-        <span>{{ wrongAnswers }}</span>
+      <div class="box">
+        <span class="wrong circle">{{ wrongAnswers }}</span>
         Wrong
       </div>
     </div>
   </div>
   <div class="footer">
-    <button>Restart The Quiz</button>
-    <button>Continue</button>
+    <button (click)="restartQuiz()" class="restart">Restart The Quiz</button>
+    <button
+      class="continue"
+      routerLink="/main/compeleted-quiz"
+      (click)="pointsService.addPoints(quizPoints)"
+    >
+      Continue
+    </button>
   </div>
 </div>

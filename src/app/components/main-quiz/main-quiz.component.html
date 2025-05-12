@@ -73,6 +73,9 @@
       [quizTitle]="quiz.title"
       [grade]="grade"
       [resultIcon]="icon"
+      [id]="quiz.id"
+      [category]="quiz.category"
+      (restart)="onRestartQuiz()"
     ></app-final-result>
   </div>
 </div>
