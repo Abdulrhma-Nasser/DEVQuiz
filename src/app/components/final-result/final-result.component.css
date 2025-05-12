@@ -1,6 +1,4 @@
 .final-result {
-  width: 100%;
-  max-width: 550px;
   background-color: #fff;
   padding: 1.5rem;
   opacity: 1;
@@ -8,6 +6,7 @@
   background-color: var(--header-color);
   border: 1px solid var(--border-color);
   color: var(--text-color);
+
 }
 
 .final-result .header {

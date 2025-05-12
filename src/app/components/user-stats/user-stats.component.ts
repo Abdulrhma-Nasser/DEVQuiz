@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { QuizService } from '../../services/quiz.service';
+import { PointsService } from '../../services/points.service';
 
 @Component({
   selector: 'app-user-stats',
@@ -8,7 +9,7 @@ import { QuizService } from '../../services/quiz.service';
 })
 export class UserStatsComponent {
   Math: any;
-  constructor(public quizService: QuizService) {}
+  constructor(public quizService: QuizService, public pointsService: PointsService) {}
 
   getCompletedQuizPercentage(): number {
     return Math.round(

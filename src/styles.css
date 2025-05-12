@@ -44,6 +44,7 @@ html {
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--body-color);
+  scroll-behavior: smooth;
 }
 
 /* Extra small devices (portrait phones, less than 576px) */

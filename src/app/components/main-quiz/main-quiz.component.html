@@ -1,81 +1,87 @@
-<div class="main-Quiz">
-  <div class="main-Quiz-header">
-    <div class="header-left">
-      <i [class]="quiz.icon"></i>
-      <div class="header-left-title">
-        <h1>{{ quiz.title }}</h1>
-        <span>{{ quiz.difficulty }}</span>
+<div class="content">
+  <div class="main-Quiz">
+    <div class="main-Quiz-header">
+      <div class="header-left">
+        <i [class]="quiz.icon"></i>
+        <div class="header-left-title">
+          <h1>{{ quiz.title }}</h1>
+          <span>{{ quiz.difficulty }}</span>
+        </div>
       </div>
-    </div>
-    <div
-      class="circle-wrapper"
-      [style.background]="
-        'conic-gradient(red ' +
-        quizService.getCompeletedQuestionPer(questionNumber, quiz.id) +
-        '%, #d6d6d6 0%)'
-      "
-    >
-      <div class="circle">
-        <span>
-          {{ quizService.getCompeletedQuestionPer(questionNumber, quiz.id) }}%
-        </span>
-      </div>
-    </div>
-  </div>
-  <div class="main-Quiz-body">
-    <div class="question">
-      <h2>{{ quiz.questions[questionNumber].title }}</h2>
-      <ul
-        class="options"
-        *ngFor="
-          let option of quiz.questions[questionNumber].options;
-          index as i
+      <div
+        class="circle-wrapper"
+        [style.background]="
+          'conic-gradient(red ' +
+          quizService.getCompeletedQuestionPer(questionNumber, quiz.id) +
+          '%, #d6d6d6 0%)'
         "
       >
-        <li>
-          <button
-            class="option"
-            (click)="toggling(option.id)"
-            [ngClass]="{ selected: optionId! + 1 === option.id }"
-          >
-            <span>{{ getAlphabeticalIndex(i).toUpperCase() }}</span
-            >{{ option.title }}
-          </button>
-        </li>
-      </ul>
-      <button class="submit" (click)="onSubmit(quiz.questions[questionNumber])">
-        Submit Answer
-      </button>
+        <div class="circle">
+          <span>
+            {{ quizService.getCompeletedQuestionPer(questionNumber, quiz.id) }}%
+          </span>
+        </div>
+      </div>
     </div>
-    <div class="question-list">
-      <h3>
-        Quiz Questions List
-        <span>{{ quiz.questions.length }}</span>
-      </h3>
-      <ul *ngFor="let question of quiz.questions">
-        <li [ngClass]="{ submitted: question.isCompeleted }">
-          Quiz Question {{ question.id }}
-          <i class="fa-solid fa-circle-check"></i>
-        </li>
-      </ul>
-    </div>
-    <div class="modal" [style.opacity]="popUp ? 1 : 0">
+    <div class="main-Quiz-body">
+      <div class="question">
+        <h2>{{ quiz.questions[questionNumber].title }}</h2>
+        <ul
+          class="options"
+          *ngFor="
+            let option of quiz.questions[questionNumber].options;
+            index as i
+          "
+        >
+          <li>
+            <button
+              class="option"
+              (click)="toggling(option.id)"
+              [ngClass]="{ selected: optionId! + 1 === option.id }"
+            >
+              <span>{{ getAlphabeticalIndex(i).toUpperCase() }}</span
+              >{{ option.title }}
+            </button>
+          </li>
+        </ul>
+        <button
+          class="submit"
+          (click)="onSubmit(quiz.questions[questionNumber])"
+        >
+          Submit Answer
+        </button>
+      </div>
+      <div class="question-list">
+        <h3>
+          Quiz Questions List
+          <span>{{ quiz.questions.length }}</span>
+        </h3>
+        <ul *ngFor="let question of quiz.questions">
+          <li [ngClass]="{ submitted: question.isCompeleted }">
+            Quiz Question {{ question.id }}
+            <i class="fa-solid fa-circle-check"></i>
+          </li>
+        </ul>
+      </div>
+       <div class="modal" [style.opacity]="popUp ? 1 : 0">
       <p><i class="fa-solid fa-circle-xmark"></i>Please Select an Answer!</p>
     </div>
   </div>
-
-  <div class="result" *ngIf="modalComponent">
-    <app-final-result
-      [quizPoints]="points"
-      [wrongAnswers]="wrong"
-      [correctAnswers]="correct"
-      [quizScore]="score"
-      [quizTitle]="quiz.title"
-      [grade]="grade"
-      [resultIcon]="icon"
-      [id]="quiz.id"
-      [category]="quiz.category"
-      (restart)="onRestartQuiz()"
-    ></app-final-result>
+      <div class="result" *ngIf="modalComponent">
+        <div class="result-card">
+          <app-final-result
+            [quizPoints]="points"
+            [wrongAnswers]="wrong"
+            [correctAnswers]="correct"
+            [quizScore]="score"
+            [quizTitle]="quiz.title"
+            [grade]="grade"
+            [resultIcon]="icon"
+            [id]="quiz.id"
+            [category]="quiz.category"
+            (restart)="onRestartQuiz()"
+          ></app-final-result>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
