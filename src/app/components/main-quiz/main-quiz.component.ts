@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Question, Quiz } from '../../models/models';
 import { CommonModule } from '@angular/common';
 import { FinalResultComponent } from '../final-result/final-result.component';
+import { PointsService } from '../../services/points.service';
 
 @Component({
   selector: 'app-main-quiz',
@@ -31,6 +32,7 @@ export class MainQuizComponent implements OnInit, OnDestroy, AfterViewInit {
     public quizService: QuizService,
     private route: ActivatedRoute,
     private router: Router,
+    private pointsService: PointsService
   ) {}
 
   ngOnInit(): void {
@@ -119,7 +121,8 @@ export class MainQuizComponent implements OnInit, OnDestroy, AfterViewInit {
       this.modalComponent = true;
       this.quiz.completed = true;
       this.quiz.score = this.score;
-
+      this.pointsService.addCorrectAns(this.correct);
+      this.pointsService.addWrongAns(this.wrong);
     } else {
       this.optionId = undefined;
       this.selected = false;

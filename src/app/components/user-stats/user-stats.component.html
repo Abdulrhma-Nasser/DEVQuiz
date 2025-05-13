@@ -7,7 +7,6 @@
       (quizService.getCompletedQuizLength() / quizService.getQuizesLength()) *
         100 +
       '%, #f3f4f6 0%)'
-
     "
   >
     <div class="circle">
@@ -25,19 +24,29 @@
   </div>
   <div class="quiz-summary-container">
     <div class="quiz-summary-box">
-      <span class="quiz-summary-box-number">0</span>
+      <span class="quiz-summary-box-number">{{
+        pointsService.correctAnswers$()
+      }}</span>
       <span class="quiz-summary-box-text">Correct Answers</span>
     </div>
     <div class="quiz-summary-box">
-      <span class="quiz-summary-box-number">0</span>
+      <span class="quiz-summary-box-number">{{
+        pointsService.wrongAnswers$()
+      }}</span>
       <span class="quiz-summary-box-text">Wrong Answers</span>
     </div>
     <div class="quiz-summary-box">
-      <span class="quiz-summary-box-number">0</span>
+      <span class="quiz-summary-box-number">{{
+        quizService.getCompletedQuizLength()
+      }}</span>
       <span class="quiz-summary-box-text">Total Questions</span>
     </div>
     <div class="quiz-summary-box">
-      <span class="quiz-summary-box-number">0</span>
+      <span class="quiz-summary-box-number">
+        {{
+        getAccurcy()
+        }}%
+      </span>
       <span class="quiz-summary-box-text">Accuracy</span>
     </div>
   </div>

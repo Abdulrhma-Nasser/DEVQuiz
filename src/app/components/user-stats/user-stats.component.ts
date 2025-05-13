@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
 import { QuizService } from '../../services/quiz.service';
 import { PointsService } from '../../services/points.service';
 
@@ -8,8 +8,10 @@ import { PointsService } from '../../services/points.service';
   styleUrls: ['./user-stats.component.css'],
 })
 export class UserStatsComponent {
-  Math: any;
-  constructor(public quizService: QuizService, public pointsService: PointsService) {}
+  constructor(
+    public quizService: QuizService,
+    public pointsService: PointsService
+  ) {}
 
   getCompletedQuizPercentage(): number {
     return Math.round(
@@ -17,5 +19,15 @@ export class UserStatsComponent {
         this.quizService.getQuizesLength()) *
         100
     );
+  }
+
+  getAccurcy(): number {
+    return this.quizService.getCompletedQuizLength() > 0
+      ? Math.round(
+          (this.pointsService.correctAnswers$() /
+            (this.quizService.getCompletedQuizLength() * 6)) *
+            100
+        )
+      : 0;
   }
 }
